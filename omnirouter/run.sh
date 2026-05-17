@@ -19,4 +19,5 @@ else
     echo "OmniRoute: combined :${PORT}, data=/share/omniroute"
 fi
 
-exec omniroute
+cd /app
+exec node /app/dev/run-standalone.mjs
