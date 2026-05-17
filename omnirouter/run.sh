@@ -20,4 +20,4 @@ else
 fi
 
 cd /app
-exec node /app/dev/run-standalone.mjs
+exec docker-entrypoint.sh node run-standalone.mjs
