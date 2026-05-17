@@ -34,6 +34,23 @@ Persistent data (database, providers, settings) is stored in `/share/omniroute` 
 - OpenAI-compatible API: `http://<HA-IP>:20128/v1`
 - MCP / A2A: see [OmniRoute docs](https://github.com/diegosouzapw/OmniRoute).
 
+## Sidebar entry
+
+OmniRoute is a Next.js app with a fixed `basePath`, so it does **not** work behind Home Assistant Ingress (links would resolve to HA's own routes). The add-on therefore exposes only the **Open Web UI** button.
+
+If you want OmniRoute pinned in the HA sidebar, add a `panel_iframe` to `configuration.yaml`:
+
+```yaml
+panel_iframe:
+  omniroute:
+    title: "OmniRoute"
+    icon: mdi:router-network
+    url: "http://YOUR_HA_IP:20128"
+    require_admin: true
+```
+
+Reload HA — entry appears in the sidebar.
+
 ## Configuration (API keys, providers, combos)
 
 All provider configuration is done from the dashboard UI on first launch. Nothing else is exposed via add-on options.
