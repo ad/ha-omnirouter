@@ -1,6 +1,6 @@
 name: "OmniRoute"
 description: "Free AI gateway: one endpoint, 160+ providers, smart fallback"
-version: "3.7.8-1"
+version: "3.7.8-2"
 slug: "omnirouter"
 init: false
 arch:
@@ -14,6 +14,12 @@ ports:
 ports_description:
   20128/tcp: "OmniRoute API + Dashboard"
   20129/tcp: "Separate dashboard port (split-port mode, optional)"
+webui: "http://[HOST]:[PORT:20128]"
+ingress: true
+ingress_port: 20128
+panel_icon: "mdi:router-network"
+panel_title: "OmniRoute"
+panel_admin: true
 map:
   - share:rw
 options:
