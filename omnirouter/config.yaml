@@ -1,6 +1,6 @@
 name: "OmniRoute"
 description: "Free AI gateway: one endpoint, 160+ providers, smart fallback"
-version: "3.7.9-1"
+version: "3.7.9-2"
 slug: "omnirouter"
 init: false
 arch:
